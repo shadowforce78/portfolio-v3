@@ -1,0 +1,44 @@
+<%- include('partials/head') %>
+
+<%- include('partials/header') %>
+
+<section class="page-header parallax-section">
+  <div class="container">
+    <h1 class="page-title fade-in"><%= translations.experience.title %></h1>
+    <p class="page-subtitle fade-in"><%= translations.experience.subtitle %></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="timeline">
+      <% portfolio.experiences.forEach((exp, index) => { %>
+        <div class="timeline-item fade-in-up" style="animation-delay: <%= index * 0.1 %>s;">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-header">
+              <h3 class="timeline-title"><%= exp.title %></h3>
+              <span class="timeline-company"><%= exp.company %></span>
+            </div>
+            <div class="timeline-period">
+              <i class="fas fa-calendar"></i>
+              <%= exp.period %>
+            </div>
+            <p class="timeline-description"><%= exp.description %></p>
+            <% if (exp.technologies && exp.technologies.length > 0) { %>
+              <div class="timeline-technologies">
+                <% exp.technologies.forEach(tech => { %>
+                  <span class="tag"><%= tech %></span>
+                <% }) %>
+              </div>
+            <% } %>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<%- include('partials/scripts') %>

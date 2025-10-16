@@ -1,0 +1,103 @@
+<header class="header glass">
+  <div class="container">
+    <nav class="navbar">
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <span class="logo-text"><%= portfolio.nickname %></span>
+        <span class="logo-dot">.</span>
+      </a>
+      
+      <!-- Navigation principale -->
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="/" class="nav-link <%= typeof page !== 'undefined' && page === 'home' ? 'active' : '' %>">
+            <%= translations.nav.home %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/about" class="nav-link <%= typeof page !== 'undefined' && page === 'about' ? 'active' : '' %>">
+            <%= translations.nav.about %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/skills" class="nav-link <%= typeof page !== 'undefined' && page === 'skills' ? 'active' : '' %>">
+            <%= translations.nav.skills %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/projects" class="nav-link <%= typeof page !== 'undefined' && page === 'projects' ? 'active' : '' %>">
+            <%= translations.nav.projects %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/experience" class="nav-link <%= typeof page !== 'undefined' && page === 'experience' ? 'active' : '' %>">
+            <%= translations.nav.experience %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/education" class="nav-link <%= typeof page !== 'undefined' && page === 'education' ? 'active' : '' %>">
+            <%= translations.nav.education %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/blog" class="nav-link <%= typeof page !== 'undefined' && page === 'blog' ? 'active' : '' %> disabled" title="<%= translations.blog.comingSoon %>">
+            <%= translations.nav.blog %>
+            <span class="badge">Soon</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact" class="nav-link <%= typeof page !== 'undefined' && page === 'contact' ? 'active' : '' %>">
+            <%= translations.nav.contact %>
+          </a>
+        </li>
+      </ul>
+      
+      <!-- Actions -->
+      <div class="nav-actions">
+        <!-- Sélecteur de langue -->
+        <div class="language-switcher">
+          <button class="lang-btn" aria-label="<%= translations.language.toggle %>">
+            <i class="fas fa-globe"></i>
+            <span><%= lang.toUpperCase() %></span>
+          </button>
+          <div class="lang-dropdown">
+            <a href="/lang/fr" class="lang-option <%= lang === 'fr' ? 'active' : '' %>">
+              🇫🇷 <%= translations.language.french %>
+            </a>
+            <a href="/lang/en" class="lang-option <%= lang === 'en' ? 'active' : '' %>">
+              🇬🇧 <%= translations.language.english %>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Sélecteur de thème -->
+        <button class="theme-toggle" aria-label="<%= translations.theme.toggle %>">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </button>
+        
+        <!-- Menu burger mobile -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Menu mobile overlay -->
+<div class="mobile-menu-overlay">
+  <div class="mobile-menu-content">
+    <ul class="mobile-nav">
+      <li><a href="/"><%= translations.nav.home %></a></li>
+      <li><a href="/about"><%= translations.nav.about %></a></li>
+      <li><a href="/skills"><%= translations.nav.skills %></a></li>
+      <li><a href="/projects"><%= translations.nav.projects %></a></li>
+      <li><a href="/experience"><%= translations.nav.experience %></a></li>
+      <li><a href="/education"><%= translations.nav.education %></a></li>
+      <li><a href="/contact"><%= translations.nav.contact %></a></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<%- include('partials/head') %>
+
+<%- include('partials/header') %>
+
+<section class="page-header parallax-section">
+  <div class="container">
+    <h1 class="page-title fade-in"><%= translations.blog.title %></h1>
+    <p class="page-subtitle fade-in"><%= translations.blog.subtitle %></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="coming-soon glass fade-in-up">
+      <i class="fas fa-tools coming-soon-icon"></i>
+      <h2 class="coming-soon-title"><%= translations.blog.comingSoon %></h2>
+      <p class="coming-soon-text"><%= translations.blog.disabled %></p>
+      <a href="/" class="btn btn-primary">
+        <i class="fas fa-home"></i> <%= translations.errors.backHome %>
+      </a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<%- include('partials/scripts') %>

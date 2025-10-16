@@ -1,0 +1,56 @@
+<%- include('partials/head') %>
+
+<%- include('partials/header') %>
+
+<section class="page-header parallax-section">
+  <div class="container">
+    <h1 class="page-title fade-in"><%= translations.projects.title %></h1>
+    <p class="page-subtitle fade-in"><%= translations.projects.subtitle %></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="projects-grid-full">
+      <% portfolio.projects.forEach((project, index) => { %>
+        <div class="project-card-full glass fade-in-up" style="animation-delay: <%= index * 0.1 %>s;">
+          <div class="project-image-full">
+            <img src="<%= project.image %>" alt="<%= project.title %>" loading="lazy" onerror="this.src='/images/placeholder-project.jpg'">
+            <div class="project-overlay-full">
+              <div class="project-links">
+                <% if (project.github) { %>
+                  <a href="<%= project.github %>" target="_blank" rel="noopener noreferrer" class="project-btn">
+                    <i class="fab fa-github"></i> <%= translations.projects.viewGithub %>
+                  </a>
+                <% } %>
+                <% if (project.demo) { %>
+                  <a href="<%= project.demo %>" target="_blank" rel="noopener noreferrer" class="project-btn">
+                    <i class="fas fa-external-link-alt"></i> <%= translations.projects.viewDemo %>
+                  </a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+          <div class="project-content-full">
+            <h3 class="project-title-full"><%= project.title %></h3>
+            <p class="project-description-full"><%= project.description %></p>
+            <div class="project-footer">
+              <div class="project-tags-full">
+                <% project.tags.forEach(tag => { %>
+                  <span class="tag"><%= tag %></span>
+                <% }) %>
+              </div>
+              <a href="/projects/<%= project.id %>" class="view-more">
+                <%= translations.projects.viewProject %> <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<%- include('partials/scripts') %>

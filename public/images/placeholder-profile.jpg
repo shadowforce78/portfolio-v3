@@ -1,0 +1,10 @@
+<!-- Placeholder SVG pour les images de profil -->
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#1A1A2E"/>
+  <circle cx="200" cy="150" r="60" fill="#8B5CF6"/>
+  <rect x="120" y="220" width="160" height="20" rx="10" fill="#3B82F6"/>
+  <rect x="100" y="260" width="200" height="15" rx="7.5" fill="#3B82F6" opacity="0.5"/>
+  <text x="200" y="330" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">
+    Photo de profil
+  </text>
+</svg>

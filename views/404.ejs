@@ -1,0 +1,20 @@
+<%- include('partials/head') %>
+
+<%- include('partials/header') %>
+
+<section class="error-section">
+  <div class="container">
+    <div class="error-content fade-in">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title"><%= translations.errors.notFound %></h2>
+      <p class="error-message"><%= translations.errors.notFoundMessage %></p>
+      <a href="/" class="btn btn-primary">
+        <i class="fas fa-home"></i> <%= translations.errors.backHome %>
+      </a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<%- include('partials/scripts') %>

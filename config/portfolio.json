@@ -1,0 +1,92 @@
+{
+  "name": "Adam Planque",
+  "nickname": "SaumonDeLuxe",
+  "title": "Fullstack Developer",
+  "tagline": "Passionné par le web et les nouvelles technologies",
+  "bio": "Développeur web fullstack avec une passion pour la création de solutions innovantes et performantes. Toujours à la recherche de nouveaux défis et opportunités pour apprendre et grandir dans le domaine du développement web.",
+  "email": "contact@adamplanque.dev",
+  "location": "France",
+  "github": "https://github.com/shadowforce78",
+  "linkedin": "https://www.linkedin.com/in/adam-planque",
+  
+  "skills": {
+    "languages": ["JavaScript", "NodeJS", "Python", "HTML", "CSS", "C#", "C++"],
+    "frameworks": ["React", "Express", "Flask"],
+    "databases": ["MongoDB", "MySQL"],
+    "devops": ["Docker", "CI/CD", "Azure"],
+    "servers": ["Nginx", "Apache"],
+    "tools": ["Git", "GitHub", "Linux"]
+  },
+  
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Projet 1",
+      "description": "Description à venir",
+      "image": "/images/projects/project1.jpg",
+      "tags": ["NodeJS", "React", "MongoDB"],
+      "github": "https://github.com/shadowforce78/project1",
+      "demo": "",
+      "featured": true
+    },
+    {
+      "id": "project-2",
+      "title": "Projet 2",
+      "description": "Description à venir",
+      "image": "/images/projects/project2.jpg",
+      "tags": ["Python", "Flask"],
+      "github": "https://github.com/shadowforce78/project2",
+      "demo": "",
+      "featured": true
+    },
+    {
+      "id": "project-3",
+      "title": "Projet 3",
+      "description": "Description à venir",
+      "image": "/images/projects/project3.jpg",
+      "tags": ["Express", "MongoDB"],
+      "github": "https://github.com/shadowforce78/project3",
+      "demo": "",
+      "featured": false
+    },
+    {
+      "id": "project-4",
+      "title": "Projet 4",
+      "description": "Description à venir",
+      "image": "/images/projects/project4.jpg",
+      "tags": ["React", "NodeJS"],
+      "github": "https://github.com/shadowforce78/project4",
+      "demo": "",
+      "featured": false
+    },
+    {
+      "id": "project-5",
+      "title": "Projet 5",
+      "description": "Description à venir",
+      "image": "/images/projects/project5.jpg",
+      "tags": ["Docker", "Azure"],
+      "github": "https://github.com/shadowforce78/project5",
+      "demo": "",
+      "featured": false
+    }
+  ],
+  
+  "experiences": [
+    {
+      "title": "Poste à définir",
+      "company": "Entreprise à définir",
+      "period": "2024 - Présent",
+      "description": "Description à venir",
+      "technologies": []
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Diplôme à définir",
+      "school": "École à définir",
+      "period": "Année à définir",
+      "description": "Description à venir"
+    }
+  ]
+}

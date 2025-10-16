@@ -1,0 +1,35 @@
+<%- include('partials/head') %>
+
+<%- include('partials/header') %>
+
+<section class="page-header parallax-section">
+  <div class="container">
+    <h1 class="page-title fade-in"><%= translations.education.title %></h1>
+    <p class="page-subtitle fade-in"><%= translations.education.subtitle %></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="education-grid">
+      <% portfolio.education.forEach((edu, index) => { %>
+        <div class="education-card glass fade-in-up" style="animation-delay: <%= index * 0.1 %>s;">
+          <div class="education-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="education-degree"><%= edu.degree %></h3>
+          <h4 class="education-school"><%= edu.school %></h4>
+          <div class="education-period">
+            <i class="fas fa-calendar"></i>
+            <%= edu.period %>
+          </div>
+          <p class="education-description"><%= edu.description %></p>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<%- include('partials/scripts') %>

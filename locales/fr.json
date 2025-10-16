@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "education": "Formation",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "description": "Développeur passionné créant des expériences web modernes et performantes",
+    "cta": "Voir mes projets",
+    "downloadCv": "Télécharger mon CV"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "subtitle": "Qui suis-je ?",
+    "bio": "Développeur web fullstack avec une passion pour la création de solutions innovantes et performantes. Toujours à la recherche de nouveaux défis et opportunités pour apprendre et grandir dans le domaine du développement web."
+  },
+  "skills": {
+    "title": "Mes Compétences",
+    "subtitle": "Technologies que je maîtrise",
+    "categories": {
+      "languages": "Langages",
+      "frameworks": "Frameworks",
+      "databases": "Bases de données",
+      "devops": "DevOps",
+      "servers": "Serveurs",
+      "tools": "Outils"
+    }
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Découvrez mes réalisations",
+    "featured": "Projets phares",
+    "all": "Tous les projets",
+    "viewProject": "Voir le projet",
+    "viewGithub": "Voir sur GitHub",
+    "viewDemo": "Voir la démo",
+    "technologies": "Technologies utilisées"
+  },
+  "experience": {
+    "title": "Expérience Professionnelle",
+    "subtitle": "Mon parcours professionnel",
+    "current": "Actuellement",
+    "technologies": "Technologies utilisées"
+  },
+  "education": {
+    "title": "Formation",
+    "subtitle": "Mon parcours académique"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Mes articles et réflexions",
+    "comingSoon": "Bientôt disponible",
+    "disabled": "Cette section est en cours de développement. Revenez bientôt !"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Une question ? Un projet ? Parlons-en !",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi du message"
+    },
+    "info": {
+      "email": "Email",
+      "location": "Localisation",
+      "availability": "Disponibilité"
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "madeWith": "Fait avec",
+    "by": "par"
+  },
+  "theme": {
+    "dark": "Mode sombre",
+    "light": "Mode clair",
+    "toggle": "Changer le thème"
+  },
+  "language": {
+    "french": "Français",
+    "english": "English",
+    "toggle": "Changer de langue"
+  },
+  "errors": {
+    "notFound": "Page non trouvée",
+    "notFoundMessage": "Désolé, la page que vous recherchez n'existe pas.",
+    "serverError": "Erreur serveur",
+    "serverErrorMessage": "Une erreur est survenue. Veuillez réessayer plus tard.",
+    "backHome": "Retour à l'accueil"
+  },
+  "common": {
+    "readMore": "Lire plus",
+    "learnMore": "En savoir plus",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent"
+  }
+}
