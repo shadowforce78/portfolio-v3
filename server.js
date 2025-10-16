@@ -46,7 +46,7 @@ app.use('/', routes);
 
 // Route 404
 app.use((req, res) => {
-  res.status(404).render('404', { 
+  res.status(404).render('404', {
     title: res.locals.translations.errors.notFound || '404 - Page non trouvée'
   });
 });
@@ -54,7 +54,7 @@ app.use((req, res) => {
 // Gestion des erreurs
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).render('500', { 
+  res.status(500).render('500', {
     title: res.locals.translations.errors.serverError || '500 - Erreur serveur',
     error: process.env.NODE_ENV === 'development' ? err : {}
   });
