@@ -337,6 +337,18 @@ body.theme-light .project-description-full {
   position: relative;
 }
 
+/* Items impairs (1, 3, 5...) - contenu à droite */
+.timeline-item:nth-child(odd) .timeline-content {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-marker {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Items pairs (2, 4, 6...) - contenu à gauche */
 .timeline-item:nth-child(even) .timeline-content {
   grid-column: 1;
   grid-row: 1;
