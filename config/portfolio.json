@@ -8,7 +8,7 @@
   "location": "France",
   "github": "https://github.com/shadowforce78",
   "linkedin": "https://www.linkedin.com/in/adam-planque",
-  
+
   "skills": {
     "languages": ["JavaScript", "NodeJS", "Python", "HTML", "CSS", "C#", "C++"],
     "frameworks": ["React", "Express", "Flask", "Geode-SDK"],
@@ -17,7 +17,7 @@
     "servers": ["Nginx", "Apache"],
     "tools": ["Git", "GitHub", "Linux"]
   },
-  
+
   "projects": [
     {
       "id": "project-1",
@@ -40,23 +40,35 @@
       "featured": true
     }
   ],
-  
+
   "experiences": [
     {
-      "title": "Poste à définir",
-      "company": "Entreprise à définir",
-      "period": "2024 - Présent",
-      "description": "Description à venir",
-      "technologies": []
+      "title": "Apprenti - DSI",
+      "company": "ENSP (École Nationale Supérieure de Paysage)",
+      "period": "2025 - 2027",
+      "description": "Apprentissage au sein de la DSI de l'ENSP, impliquant le développement et la maintenance des systèmes informatiques de l'école.",
+      "technologies": ["Réseaux" , "Sécurité", "Support Utilisateur"]
     }
   ],
-  
+
   "education": [
     {
-      "degree": "Diplôme à définir",
-      "school": "École à définir",
-      "period": "Année à définir",
-      "description": "Description à venir"
+      "degree": "BTS SIO SLAM (Services Informatiques aux Organisations - Solutions Logicielles et Applications Métiers)",
+      "school": "Ensitech - Campus Saint-Quentin-en-Yvelines",
+      "period": "2025 - 2027",
+      "description": "Formation professionnelle axée sur le développement de solutions logicielles pour les organisations."
+    },
+    {
+      "degree": "Baccalauréat STI2D (Sciences et Technologies de l'Industrie et du Développement Durable)",
+      "school": "Lycée Emilie de Breteuil",
+      "period": "2021 - 2024",
+      "description": "Formation axée sur les technologies de l'information et du développement durable."
+    },
+    {
+      "degree": "BUT Informatique (Bachelor Universitaire de Technologie)",
+      "school": "IUT De Vélizy (UVSQ)",
+      "period": "2024 - 2025",
+      "description": "Formation universitaire en informatique, couvrant divers aspects du développement logiciel et des systèmes informatiques."
     }
   ]
 }
