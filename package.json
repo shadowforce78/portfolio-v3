@@ -9,17 +9,23 @@
     "docker:build": "docker build -t portfolio-v3 .",
     "docker:run": "docker run -p 3000:3000 portfolio-v3"
   },
-  "keywords": ["portfolio", "express", "nodejs", "fullstack"],
+  "keywords": [
+    "portfolio",
+    "express",
+    "nodejs",
+    "fullstack"
+  ],
   "author": "Adam Planque (SaumonDeLuxe)",
   "license": "MIT",
   "dependencies": {
-    "express": "^5.1.0",
-    "ejs": "^3.1.10",
-    "nodemailer": "^6.9.15",
-    "express-validator": "^7.2.0",
-    "dotenv": "^16.4.5",
     "compression": "^1.7.4",
-    "helmet": "^7.1.0"
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.0",
+    "helmet": "^7.1.0",
+    "nodemailer": "^6.9.15"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"

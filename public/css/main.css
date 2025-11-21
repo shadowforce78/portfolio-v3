@@ -12,7 +12,7 @@
   --bg-primary-dark: #0A0A0F;
   --bg-secondary-dark: #1A1A2E;
   --text-primary-dark: #FFFFFF;
-  --text-secondary-dark: #B4B4B4;
+  --text-secondary-dark: #A0A0A0;
   
   /* Couleurs d'accent */
   --color-violet: #8B5CF6;
@@ -367,6 +367,7 @@ button:hover ~ .custom-cursor {
 }
 
 .language-switcher:hover .lang-dropdown,
+.language-switcher.active .lang-dropdown,
 .lang-dropdown:hover {
   opacity: 1;
   visibility: visible;

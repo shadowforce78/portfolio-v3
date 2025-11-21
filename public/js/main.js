@@ -38,6 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Language switcher toggle
+  const langBtn = document.querySelector('.lang-btn');
+  const langSwitcher = document.querySelector('.language-switcher');
+  
+  if (langBtn && langSwitcher) {
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langSwitcher.classList.toggle('active');
+    });
+    
+    // Fermer le dropdown si on clique ailleurs
+    document.addEventListener('click', (e) => {
+      if (!langSwitcher.contains(e.target)) {
+        langSwitcher.classList.remove('active');
+      }
+    });
+  }
+
   // Scroll to top button
   const scrollTopBtn = document.querySelector('.scroll-top');
   
