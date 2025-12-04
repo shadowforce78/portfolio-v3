@@ -7,13 +7,13 @@
   --bg-secondary-light: #F8F9FA;
   --text-primary-light: #1A1A1A;
   --text-secondary-light: #6C757D;
-  
+
   /* Couleurs Dark Mode */
   --bg-primary-dark: #0A0A0F;
   --bg-secondary-dark: #1A1A2E;
   --text-primary-dark: #FFFFFF;
   --text-secondary-dark: #A0A0A0;
-  
+
   /* Couleurs d'accent */
   --color-violet: #8B5CF6;
   --color-violet-light: #A78BFA;
@@ -22,19 +22,19 @@
   --color-blue-light: #60A5FA;
   --color-gray: #6B7280;
   --color-gray-light: #9CA3AF;
-  
+
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--color-violet) 0%, var(--color-blue) 100%);
   --gradient-secondary: linear-gradient(135deg, var(--color-blue) 0%, var(--color-violet) 100%);
   --gradient-orb-1: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
   --gradient-orb-2: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
-  
+
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
   --glass-blur: blur(10px);
-  
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -43,23 +43,23 @@
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
   --spacing-3xl: 6rem;
-  
+
   /* Border radius */
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
   --radius-xl: 2rem;
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
-  
+
   /* Z-index */
   --z-header: 1000;
   --z-modal: 2000;
   --z-cursor: 3000;
-  
+
   /* Fonts */
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
@@ -111,16 +111,32 @@ body.theme-light .glass {
 /* ===========================
    TYPOGRAPHY
    =========================== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--spacing-sm);
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
 
 p {
   margin-bottom: var(--spacing-md);
@@ -196,6 +212,7 @@ a:hover {
 }
 
 @media (pointer: fine) {
+
   .custom-cursor,
   .custom-cursor-follower {
     display: block;
@@ -218,8 +235,8 @@ body:hover .custom-cursor {
   transform: translate(-50%, -50%) scale(0.8);
 }
 
-a:hover ~ .custom-cursor,
-button:hover ~ .custom-cursor {
+a:hover~.custom-cursor,
+button:hover~.custom-cursor {
   transform: translate(-50%, -50%) scale(1.5);
 }
 
@@ -265,8 +282,15 @@ button:hover ~ .custom-cursor {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .nav-menu {
@@ -492,13 +516,32 @@ body.theme-light .theme-toggle .fa-moon {
 .mobile-nav a {
   font-size: 1.5rem;
   font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.mobile-nav a.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mobile-nav a .badge {
+  position: absolute;
+  top: -10px;
+  right: -30px;
+  background: var(--gradient-primary);
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: 600;
 }
 
 @media (max-width: 968px) {
   .nav-menu {
     display: none;
   }
-  
+
   .mobile-menu-toggle {
     display: flex;
   }
@@ -626,9 +669,19 @@ body.theme-light .page-subtitle {
 }
 
 @keyframes float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
 }
 
 .hero-content {
@@ -713,8 +766,15 @@ body.theme-light .hero-description {
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
 }
 
 .scroll-indicator {
@@ -740,8 +800,15 @@ body.theme-light .hero-description {
 }
 
 @keyframes scroll {
-  0% { opacity: 1; top: 10px; }
-  100% { opacity: 0; top: 30px; }
+  0% {
+    opacity: 1;
+    top: 10px;
+  }
+
+  100% {
+    opacity: 0;
+    top: 30px;
+  }
 }
 
 /* ===========================
@@ -915,9 +982,19 @@ body.theme-light .footer-bottom {
 }
 
 @keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  25% { transform: scale(1.2); }
-  50% { transform: scale(1); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
 }
 
 .scroll-top {
