@@ -41,97 +41,12 @@
       </div>
       
       <!-- Formulaire de contact -->
-      <div class="contact-form-wrapper fade-in-right">
-        <form id="contact-form" class="contact-form glass">
-          <div class="form-group">
-            <label for="name"><%= translations.contact.form.name %></label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email"><%= translations.contact.form.email %></label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="subject"><%= translations.contact.form.subject %></label>
-            <input type="text" id="subject" name="subject" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="message"><%= translations.contact.form.message %></label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          
-          <button type="submit" class="btn btn-primary btn-block">
-            <span class="btn-text"><%= translations.contact.form.send %></span>
-            <span class="btn-loading" style="display: none;">
-              <i class="fas fa-spinner fa-spin"></i> <%= translations.contact.form.sending %>
-            </span>
-          </button>
-          
-          <div class="form-message" style="display: none;"></div>
-        </form>
-      </div>
+
     </div>
   </div>
 </section>
 
-<script>
-document.getElementById('contact-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  
-  const form = e.target;
-  const btn = form.querySelector('button[type="submit"]');
-  const btnText = btn.querySelector('.btn-text');
-  const btnLoading = btn.querySelector('.btn-loading');
-  const messageDiv = form.querySelector('.form-message');
-  
-  // Désactiver le bouton
-  btn.disabled = true;
-  btnText.style.display = 'none';
-  btnLoading.style.display = 'inline-block';
-  
-  const formData = {
-    name: form.name.value,
-    email: form.email.value,
-    subject: form.subject.value,
-    message: form.message.value
-  };
-  
-  try {
-    const response = await fetch('/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    });
-    
-    const result = await response.json();
-    
-    if (result.success) {
-      messageDiv.className = 'form-message success';
-      messageDiv.textContent = '<%= translations.contact.form.success %>';
-      form.reset();
-    } else {
-      throw new Error(result.message);
-    }
-  } catch (error) {
-    messageDiv.className = 'form-message error';
-    messageDiv.textContent = '<%= translations.contact.form.error %>';
-  } finally {
-    messageDiv.style.display = 'block';
-    btn.disabled = false;
-    btnText.style.display = 'inline-block';
-    btnLoading.style.display = 'none';
-    
-    setTimeout(() => {
-      messageDiv.style.display = 'none';
-    }, 5000);
-  }
-});
-</script>
+
 
 <%- include('partials/footer') %>
 
