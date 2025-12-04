@@ -1,22 +1,17 @@
-version: '3.8'
+version: "3.8"
 
 services:
-  portfolio:
+  site:
     build: .
-    ports:
-      - "3000:3000"
+    container_name: site-node
+    restart: always
     environment:
-      - NODE_ENV=production
-      - PORT=3000
-    env_file:
-      - .env
-    volumes:
-      - ./public/files:/app/public/files
-      - ./public/images:/app/public/images
-    restart: unless-stopped
+      - VIRTUAL_HOST=saumondeluxe.com
+      - LETSENCRYPT_HOST=saumondeluxe.com
+      - LETSENCRYPT_EMAIL=planque.adam@gmail.com
     networks:
-      - portfolio-network
+      - proxy-tier
 
 networks:
-  portfolio-network:
-    driver: bridge
+  proxy-tier:
+    external: true

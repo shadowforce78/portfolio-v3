@@ -1,23 +1,17 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
-WORKDIR /app
+# Crée un dossier app dans le container
+WORKDIR /usr/src/app
 
-# Copier package.json et installer les dépendances
+# Copie package.json et installe les dépendances
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm install --production
 
-# Copier le reste de l'application
+# Copie ton code
 COPY . .
 
-# Créer les dossiers nécessaires
-RUN mkdir -p public/images public/files
+# Expose ton port interne (6969)
+EXPOSE 6969
 
-# Exposer le port
-EXPOSE 3000
-
-# Variables d'environnement
-ENV NODE_ENV=production
-ENV PORT=3000
-
-# Démarrer l'application
+# Commande de démarrage
 CMD ["node", "server.js"]
