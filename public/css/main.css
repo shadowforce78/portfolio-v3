@@ -470,11 +470,15 @@ body.theme-light .theme-toggle .fa-moon {
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-menu-toggle span {

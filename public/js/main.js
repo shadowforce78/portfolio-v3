@@ -175,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   console.log('%c👋 Salut! Tu fouilles dans le code ? 🕵️', 'font-size: 20px; color: #8B5CF6; font-weight: bold;');
+  console.log("%cSache que tu ne trouveras rien d'important ici :)", "font-size: 14px; color: #582a72ff;")
   console.log('%cSi tu as des questions ou des suggestions, n\'hésite pas à me contacter! 🚀', 'font-size: 14px; color: #3B82F6;');
 });
 
