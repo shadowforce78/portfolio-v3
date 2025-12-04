@@ -203,6 +203,25 @@ body.theme-light .skill-item {
 }
 
 /* Projects grid full */
+.projects-grid-full {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.project-card-full {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-normal);
+}
+
+.project-card-full:hover {
+  transform: translateY(-5px);
+}
+
 .project-image-full {
   position: relative;
   border-radius: var(--radius-lg);
@@ -260,17 +279,20 @@ body.theme-light .skill-item {
 .project-content-full {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: var(--spacing-md);
+  flex-grow: 1;
 }
 
 .project-title-full {
-  font-size: 1.75rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xs);
 }
 
 .project-description-full {
   color: var(--text-secondary-dark);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.95rem;
+  flex-grow: 1;
 }
 
 body.theme-light .project-description-full {
@@ -364,11 +386,11 @@ body.theme-light .project-description-full {
     grid-template-columns: 40px 1fr;
     gap: var(--spacing-md);
   }
-  
+
   .timeline-item:nth-child(even) .timeline-content {
     grid-column: 2;
   }
-  
+
   .timeline-item:nth-child(even) .timeline-marker {
     grid-column: 1;
   }
@@ -744,7 +766,7 @@ body.theme-light .cta-text {
     --spacing-2xl: 3rem;
     --spacing-3xl: 4rem;
   }
-  
+
   .section {
     padding: var(--spacing-2xl) 0;
   }
